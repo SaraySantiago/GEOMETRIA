@@ -3,8 +3,9 @@
 class figura: 
     
     __dimensiones = []
+    __color = None
     
-    def __init__(self, dimensions=[1,1]) -> None:
+    def __init__(self, dimensions=[1,1], color = None) -> None:
           self.__dimensiones  = dimensions 
           
     def getDimensiones(self):
@@ -14,13 +15,17 @@ class figura:
         return 5
 
     def area(self):
-        return 5 
+        return 5
+    
+    def __str__(self) -> str:
+        answ = f"figura: area: {self.area()} perimetro: {self.perimetro()}" 
+        return answ
 
 if __name__ == "__main__":
     
     f0 = figura() 
-    print (f0.getDimensiones())
+    print (f0)
     f1 = figura([2]) 
-    print (f1.getDimensiones())
+    print (f1)
     f3 = figura([2,3]) 
-    print (f3.getDimensiones())
+    print (f3)

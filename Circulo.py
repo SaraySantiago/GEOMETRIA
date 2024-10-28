@@ -4,9 +4,9 @@ from Figura import figura
 
 class circulo(figura): # Los circulos SON figuras. Tiene ya lo mismo que figura. 
     
-    __color = None
+# TODO elevar color a la superclase
     
-    def __init__(self, dimensions=...,color=None) -> None:
+    def __init__(self, dimensions=...) -> None:
         super().__init__(dimensions)
 
 
